@@ -8,10 +8,10 @@ document.getElementById('sign-in').addEventListener('click', function () {
 
     // Setup Username or Email and Password for login.
     if (userEmail == '' && userPass == '') {
-        alert('Please insert a valid ID and Password')
+        alert('Please insert a valid ID and Password');
     } else if (userEmail == 'ab@cd.com' && userPass == '123') {
-        window.location.href = '/dashboard.html'
+        window.location.href = '/dashboard.html';
     } else {
-        alert('User Email or Password is invalid')
+        alert('User Email or Password is invalid');
     }
 })
