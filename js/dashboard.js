@@ -42,4 +42,12 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
     withdraw.innerText = totalWithdraw;
     // Clearing input value afer Withdraw.
     withdrawInput.value = '';
+    // Balance adjustment afer Withdraw.
+    const balance = document.getElementById('balance-amount');
+    const balanceValueText = balance.innerText;
+    const balanceValue = parseFloat(balanceValueText);
+    // Removing the withdrawl Balance from the Main Balance.
+    const balanceAfWithdraw = balanceValue - withdrawInputAmount;
+    // Setting the current Balace to the Main Balance.
+    balance.innerText = balanceAfWithdraw;
 })
