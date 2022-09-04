@@ -1,4 +1,4 @@
-// Deposit Event Handler
+//=== Deposit Event Handler. ===//
 document.getElementById('deposit-btn').addEventListener('click', function () {
     // Getting Deposit value.
     const depositInput = document.getElementById('user-deposit');
@@ -22,8 +22,24 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
     // Adding Deposit value with input Deposit.
     const balanceAfDeposit = balanceValue + depositInputAmount;
     balance.innerText = balanceAfDeposit;
-
-
-    // Clear input value afer Deposit.
+    // Clearing input value afer Deposit.
     depositInput.value = '';
+})
+
+//=== Withdraw and Balance Handler. ===//
+
+document.getElementById('withdraw-btn').addEventListener('click', function () {
+    // Gatting withdraw Input value and Parsing it as a number.
+    const withdrawInput = document.getElementById('user-withdraw');
+    const withdrawInputValue = withdrawInput.value;
+    const withdrawInputAmount = parseFloat(withdrawInputValue);
+    // Getting Static withdrawal Balance and parsing it as a Number.
+    const withdraw = document.getElementById('withdraw-amount');
+    const withdrawValue = withdraw.innerText;
+    const withdrawAmount = parseFloat(withdrawValue);
+    // Adding Withdraw inputs to Withdraw Balance.
+    const totalWithdraw = withdrawInputAmount + withdrawAmount;
+    withdraw.innerText = totalWithdraw;
+    // Clearing input value afer Withdraw.
+    withdrawInput.value = '';
 })
