@@ -1,11 +1,3 @@
-/* 
-function dubbleIt(num) {
-	const result = num * 2; 
-}
-const first = dubbleIt(5);
-const second = dubbleIt(7);
- */
-
 function getInputValue() {
 	    // Getting Deposit value.
 		const depositInput = document.getElementById('user-deposit');
