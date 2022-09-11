@@ -9,8 +9,6 @@ function getInputValue() {
 		return depositInputAmount;
 }
 
-
-
 //=== Deposit Event Handler. ===//
 document.getElementById('deposit-btn').addEventListener('click', function () {
 	const depositInputAmount = getInputValue();
